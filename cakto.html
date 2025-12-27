@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PRATICAMENTE — Alta Performance & Evolução da Mente</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark:#050505; --bg-card:#121212; --bg-hover:#1f1f1f;
+      --gold:#FFC107; --text:#fff; --text-secondary:#a3a3a3;
+      --border:#262626; --max-width:1200px;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box }
+    html { scroll-behavior:smooth }
+    body {
+      background:var(--bg-dark);
+      color:var(--text);
+      font-family:'Inter',sans-serif;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    h1,h2,h3,.btn {
+      font-family:'Montserrat',sans-serif;
+      text-transform:uppercase;
+    }
+
+    .container { max-width:var(--max-width); margin:0 auto; padding:0 20px }
+    section { padding:80px 0 }
+
+    h1 { font-size:3.5rem; font-weight:800; line-height:1.1 }
+    h1 span { color:var(--gold); display:block }
+    h2 {
+      font-size:2rem;
+      border-left:4px solid var(--gold);
+      padding-left:20px;
+      margin-bottom:40px;
+    }
+
+    p { color:var(--text-secondary); max-width:500px; margin-bottom:30px }
+
+    header {
+      position:sticky; top:0; z-index:10;
+      background:rgba(5,5,5,.9);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);
+      padding:15px 0;
+    }
+
+    .nav { display:flex; justify-content:space-between; align-items:center }
+    .logo-img { height:55px }
+
+    .btn {
+      display:inline-block;
+      padding:15px 30px;
+      font-weight:800;
+      border-radius:4px;
+      transition:.3s;
+      text-align:center;
+    }
+
+    .btn-gold {
+      background:var(--gold);
+      color:#000;
+      border:2px solid var(--gold);
+    }
+
+    .btn-gold:hover {
+      background:#e0a800;
+      transform:translateY(-3px);
+      box-shadow:0 10px 20px -10px rgba(255,193,7,.6);
+    }
+
+    .btn-outline {
+      border:2px solid var(--text);
+      color:var(--text);
+      background:transparent;
+    }
+
+    .hero {
+      display:flex;
+      align-items:center;
+      gap:40px;
+      min-height:85vh;
+    }
+
+    .hero-content { flex:1 }
+
+    .hero-image-wrapper {
+      flex:1;
+      display:flex;
+      justify-content:flex-end;
+    }
+
+    .montagem-container { width:420px }
+
+    .img-corpo {
+      width:100%;
+      filter:contrast(1.1) brightness(.9);
+      mask-image:linear-gradient(to bottom, black 80%, transparent 100%);
+    }
+
+    .grid-modules {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:24px;
+    }
+
+    .card {
+      background:var(--bg-card);
+      border:1px solid var(--border);
+      padding:32px;
+      border-radius:8px;
+      transition:.3s;
+    }
+
+    .card:hover {
+      border-color:var(--gold);
+      background:var(--bg-hover);
+      transform:translateY(-5px);
+    }
+
+    .module-number {
+      color:var(--gold);
+      font-weight:700;
+      font-size:.9rem;
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .form-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+    }
+
+    input {
+      width:100%;
+      padding:18px;
+      background:#1a1a1a;
+      border:1px solid #333;
+      color:#fff;
+      border-radius:4px;
+      margin-bottom:16px;
+      font-size:1rem;
+    }
+
+    #status-msg {
+      margin-top:15px;
+      font-weight:700;
+      color:var(--gold);
+    }
+
+    footer {
+      background:var(--bg-card);
+      padding:40px 0;
+      text-align:center;
+      border-top:1px solid var(--border);
+    }
+
+    @media(max-width:900px){
+      .hero { flex-direction:column-reverse; text-align:center }
+      h1 { font-size:2.4rem }
+      .form-grid { grid-template-columns:1fr }
+      .montagem-container { width:280px }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <img src="logo.png" class="logo-img">
+    <a href="#inscricao" class="btn btn-gold" style="padding:10px 20px;font-size:14px">
+      INSCREVA-SE
+    </a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero container">
+  <div class="hero-content">
+    <h1>NÃO REAJA.<span>ESCOLHA.</span></h1>
+    <p>Autoliderança e inteligência emocional para alta performance.</p>
+    <a href="#inscricao" class="btn btn-gold">QUERO ENTRAR NO JOGO</a>
+    <a href="#modulos" class="btn btn-outline">VER MÓDULOS</a>
+  </div>
+
+  <div class="hero-image-wrapper">
+    <div class="montagem-container">
+      <img src="eduardo.png" class="img-corpo">
+    </div>
+  </div>
+</section>
+
+<section id="modulos" class="container">
+  <h2>O Arsenal da Autoliderança</h2>
+
+  <div class="grid-modules">
+    <div class="card">
+      <span class="module-number">MÓDULO 01</span>
+      <h3>Base da Autoliderança</h3>
+      <p>Consciência emocional aplicada à decisão.</p>
+    </div>
+
+    <div class="card">
+      <span class="module-number">MÓDULO 02</span>
+      <h3>Mente Inabalável</h3>
+      <p>Controle do jogo mental e foco estratégico.</p>
+    </div>
+
+    <div class="card">
+      <span class="module-number">MÓDULO 03</span>
+      <h3>PNL e Regulação</h3>
+      <p>Hackeando estados emocionais.</p>
+    </div>
+
+    <div class="card">
+      <span class="module-number">MÓDULO 04</span>
+      <h3>Eneagrama Estratégico</h3>
+      <p>Mapeamento de padrões automáticos.</p>
+    </div>
+  </div>
+</section>
+
+<section id="inscricao" class="container">
+  <h2>Garanta sua vaga</h2>
+
+  <div class="form-grid">
+
+    <div>
+      <p style="color:#fff;font-size:1.2rem">Você está a um passo da virada.</p>
+      <p><strong style="color:var(--gold);font-size:2.4rem">R$ 497</strong><br>ou 12x no cartão</p>
+    </div>
+
+    <div class="card" style="background:#1a1a1a">
+
+      <form id="form" action="https://formspree.io/f/mvgeyowq" method="POST">
+
+        <input name="nome" placeholder="SEU NOME COMPLETO" required>
+        <input type="email" name="email" placeholder="SEU MELHOR E-MAIL" required>
+        <input name="whatsapp" placeholder="SEU WHATSAPP" required>
+
+        <!-- CAMPO OCULTO PARA WEBHOOK -->
+        <input type="hidden" name="origem" value="funil_praticamente">
+        <input type="hidden" name="plataforma" value="cakto">
+
+        <button type="submit" class="btn btn-gold" style="width:100%">
+          IR PARA O PAGAMENTO
+        </button>
+
+        <div id="status-msg"></div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <img src="logo.png" style="height:40px;opacity:.6"><br>
+  <p style="font-size:.9rem;color:#666">
+    © 2025 — Todos os direitos reservados
+  </p>
+</footer>
+
+<script>
+  const form = document.getElementById("form");
+  const statusMsg = document.getElementById("status-msg");
+
+  // 🔥 LINK DO CHECKOUT CAKTO
+  const CAKTO_CHECKOUT = "https://pay.cakto.com.br/SEU_LINK_AQUI";
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+
+    const btn = form.querySelector("button");
+    btn.disabled = true;
+    btn.innerText = "PROCESSANDO...";
+
+    statusMsg.innerText = "Salvando seus dados...";
+
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { "Accept":"application/json" }
+    });
+
+    setTimeout(() => {
+      statusMsg.innerText = "Redirecionando para pagamento seguro...";
+      window.location.href = CAKTO_CHECKOUT + window.location.search;
+    }, 100);
+  });
+</script>
+
+</body>
+<script>
+  const acesso = sessionStorage.getItem("acesso_praticamente");
+
+  if (!acesso) {
+    document.body.innerHTML = `
+      <div style="
+        background:#0e0e0e;
+        color:#fff;
+        font-family:Arial;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        text-align:center;
+        padding:20px;
+      ">
+        <div>
+          <h1>Acesso restrito 🔒</h1>
+          <p style="color:#aaa;max-width:420px;margin:20px auto;">
+            Este curso é exclusivo para alunos.<br>
+            Para acessar, conclua o pagamento.
+          </p>
+          <a href="https://pay.cakto.com.br/32stqcs_700497"
+             style="
+               display:inline-block;
+               margin-top:20px;
+               padding:14px 28px;
+               background:#4caf50;
+               color:#fff;
+               text-decoration:none;
+               border-radius:12px;
+               font-size:16px;
+               font-weight:bold;
+             ">
+            IR PARA O PAGAMENTO
+          </a>
+        </div>
+      </div>
+    `;
+  }
+</script>
+
+</html>
